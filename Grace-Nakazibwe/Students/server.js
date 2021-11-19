@@ -52,11 +52,11 @@ app.use(express.static(path.join(__dirname + '/public')));
 app.use('/public/imagefiles', express.static(__dirname + '/public/imagefiles'));
 
 // Routes for the project.
-// app.use('/', TemplateRoutes);
+app.use('/', StudentRegRoutes);
 
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html');
-});
+// app.get('/', (req, res) => {
+//   res.sendFile(__dirname + '/views/index.html');
+// });
 
 
 
