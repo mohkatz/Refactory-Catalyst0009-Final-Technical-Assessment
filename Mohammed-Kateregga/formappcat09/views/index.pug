@@ -13,6 +13,7 @@ html(lang='en')
         .row
           .col-lg-11.first-div
             p Student Registration Form
+          .col-lg-11#first-div  
         .row
           .form-control
             .col-lg-6.second-div
@@ -45,7 +46,7 @@ html(lang='en')
           .col-lg-11.third-div
             .form-action
               .male-gender
-                input#male.form-check-input(type='radio' name='gender' value='Male')
+                input#male.form-check-input(type='radio' name='gender' value='Male' checked)
                 span#malegender-label.form-check-label(for='male')
                   | Male
               .female-gender
@@ -93,5 +94,4 @@ html(lang='en')
           .col-lg-4.reg-btn-div
             input(type='submit' value='Register')
     script(src='/javaScriptfiles/bootstrap.min.js')
-    script(src='/javaScriptfiles/index.js')
-
+    script(src="/javaScriptfiles/index.js")
