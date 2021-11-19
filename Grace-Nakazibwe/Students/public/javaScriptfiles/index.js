@@ -163,6 +163,8 @@ const validate = (event) => {
     success.style = 'background-color:#32cd32; border:1px solid #32cd32; color:#fff; font-family:san serif;';
   }
 
+ //Gender. 
+    
   if (!isValid) {
     event.preventDefault();
     return false;
