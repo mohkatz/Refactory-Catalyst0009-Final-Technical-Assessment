@@ -1,0 +1,110 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Student Registration
+    meta(name='description' content='')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/css/bootstrap-5.1.0-dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/boxicons/css/boxicons.min.css')
+    link(rel='stylesheet' href='/css/studentreg.css')
+  body
+    .wrapper
+      h2 Student Registration Form
+      form#regform(name='registration' method='POST' action='/registration' enctype='multipart/form-data')
+        .row
+          .col-8
+            .input-group
+              h4 Sur name
+                span *
+              .input-box
+                input.name(type='text' placeholder='Enter SurName' name='surname')
+                i.bx.bx-user.icon
+              br
+              small#sur-error
+            .input-group
+              h4 Given name
+                span *
+              .input-box
+                input.name(type='text' placeholder='Enter Given Name' name='givenname')
+                i.bx.bx-user.icon
+              br
+              small#giv-error
+            .input-group(style='width: 200%;')
+              h4 Title
+                span *
+              .input-box
+                select(name='title')
+                  option Mr.
+                  option Mrs.
+                  option Miss
+                  option Dr.
+                  option Prof.
+                  option Eng.
+              br
+              small#tit-error
+          #imageupload.col-4
+            img#blah(src='#' alt='Your Image')
+            input#imgInp(accept='image/*' type='file' title='Upload Photo' name='file')
+        .input-group
+          .input-box
+            h4 Gender
+              span *
+            input#msex.radio(type='radio' value='Male' checked name='gender')
+            label(for='msex') Male
+            input#fsex.radio(type='radio' value='Female' name='gender')
+            label(for='fsex') Female
+          br
+          small#gen-error
+        .row
+          .col-6
+            .input-group
+              .input-box
+                h4 Date Of Birth
+                  span *
+                input.name(type="text" name="dob" id="dob" maxlength="10" placeholder="DD/MM/YYYY" pattern="([0-9]{2})\/([0-9]{2})\/([0-9]{4})" )
+              br
+              small#dob-error
+          .col-6
+            .input-group(style='width: 200%;')
+              h4 Country
+                span *
+              .input-box
+                select(name='country')
+                  option(value='' selected) --Select Country--
+                  option Uganda
+                  option Kenya
+                  option Tanzania
+                  option Rwanda
+                  option Burundi
+              br
+              small#cot-error
+        .input-group
+          h4 Place of Residence
+            span *
+          .input-box
+            input.name(type='tel' placeholder='Enter Your Place of Residence' name='residence')
+            i.bx.bx-home-alt.icon
+          br
+          small#res-error
+        .input-group
+          h4 Nationality
+            span *
+          .input-box
+            input.name(type='tel' placeholder='Enter your Nationality here' name='nationality')
+            i.bx.bx-globe.icon
+          br
+          small#nat-error
+        #border
+        .input-group
+          .input-box
+            button(type='submit') Register
+    script.
+      imgInp.onchange = evt => {
+      const [file] = imgInp.files
+      if (file) {
+      blah.src = URL.createObjectURL(file);
+      }
+      }
+    script(src='/js/regvalidate.js' async defer)
