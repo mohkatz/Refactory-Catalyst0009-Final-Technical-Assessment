@@ -1,0 +1,59 @@
+.fa fa-asterisk{
+   position: relative;
+   top: 10%;
+    
+}
+.title{
+    background-color: purple;
+    color: white;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    border: 2px solid black;
+    height: 600PX;
+}
+
+.form-control{
+    border-style: none;
+}
+label{
+    color: purple;
+}
+.custom-file-upload {
+    border: 1px solid rgb(192, 45, 45);
+    width: 90%;
+    height: 65%;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+input{
+ width:90%px;
+}
+.wid{
+   width: 100%; 
+}
+.sub{
+    float: right;
+    background-color: purple;
+    font-size: 20px;
+    color: white;
+    width: 40%;
+}
+hr.solid {
+    border-top: 3px solid #bbb;
+    opacity: 2;
+  }
+#imgInp{
+    width: 280%;
+    height: 30%;
+    margin: 0;
+}
+#blah{
+    width: 180%;
+    height: 70%;
+    margin: 0;
+}
+
