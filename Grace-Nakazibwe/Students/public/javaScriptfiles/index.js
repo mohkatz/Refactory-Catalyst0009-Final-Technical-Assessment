@@ -109,17 +109,54 @@ const validate = (event) => {
     Residence.stye.border = '1px solid red';
     Residence.focus();
     isValid = false;
-  } else if (!(Surname.length > 1 && Surname.length < 20)) {
+  } else if (!(studentResidence.length > 1 && studentResidence.length < 20)) {
     residenceError.innerHTML = 'Invalid Input';
     residenceError.style = 'color:red';
     Residence.stye.border = '1px solid red';
     Residence.focus();
     isValid = false;
-  } else if (!(Surname.match(nonumber))) {
+  } else if (!(studentResidence.match(nonumber))) {
     residenceError.innerHTML = 'Invalid Input';
     residenceError.style = 'color:red';
     Residence.stye.border = '1px solid red';
     Residence.focus();
+    isValid = false;
+  } else {
+    success.innerHTML = 'Registered Successfully';
+    success.style = 'background-color:#32cd32; border:1px solid #32cd32; color:#fff; font-family:san serif;';
+  }
+
+  // Nationality.
+  const studentNationality = Nationality.value.trim();
+  if (studentNationality == ' ') {
+    nationalityError.innerHTML = 'Field Required';
+    nationalityError.style = 'color:red';
+    Nationality.stye.border = '1px solid red';
+    Nationality.focus();
+    isValid = false;
+  } else if (!(studentNationality.length > 5 && studentNationality.length < 20)) {
+    nationalityError.innerHTML = 'Invalid Input';
+    nationalityError.style = 'color:red';
+    Nationality.stye.border = '1px solid red';
+    Nationality.focus();
+    isValid = false;
+  } else if (!(studentNationality.match(nonumber))) {
+    nationalityError.innerHTML = 'Invalid Input';
+    nationalityError.style = 'color:red';
+    Nationality.stye.border = '1px solid red';
+    Nationality.focus();
+    isValid = false;
+  } else {
+    success.innerHTML = 'Registered Successfully';
+    success.style = 'background-color:#32cd32; border:1px solid #32cd32; color:#fff; font-family:san serif;';
+  }
+  // Country.
+  const studentCountry = Country.value.trim();
+  if (studentCountry == 'default') {
+    countryError.innerHTML = 'Field Required';
+    countryError.style = 'color:red';
+    Country.style.border = '1px solid red';
+    Country.focus();
     isValid = false;
   } else {
     success.innerHTML = 'Registered Successfully';
