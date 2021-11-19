@@ -50,4 +50,4 @@ const studentSchema = new mongoose.Schema({
   },
 
 });
-module.exports = mongoose.model('StudentReg', studentSchema);
+module.exports = mongoose.model('StudentRegister', studentSchema);

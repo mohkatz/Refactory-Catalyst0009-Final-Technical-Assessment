@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const multer = require('multer');
 
 // Require the model.
-const StudentReg = require('../models/StudentRegModels');
+const StudentRegister = require('../models/StudentModels');
 
 const router = express.Router();
 
@@ -28,11 +28,11 @@ const upload = multer({ storage });
 // post route.
 router.post('/', upload.single('picture'), async (req, res) => {
     try {
-        const studentReg = new StudentReg(req.body);
+        const StudentRegister = new StudentRegister(req.body);
 
-        studentReg.picture = req.file.path;
-        console.log(studentReg);
-        await studentReg.save((err) => {
+        StudentRegister.picture = req.file.path;
+        console.log(StudentRegister);
+        await StudentRegister.save((err) => {
             if (err) {
                 throw err;
             }
