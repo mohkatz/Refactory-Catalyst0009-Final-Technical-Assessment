@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 // Project Schema.
-const studentSchema = new mongoose.Schema({
+const studentData = new mongoose.Schema({
   surname: {
     type: String,
     trim: true,
@@ -50,4 +50,4 @@ const studentSchema = new mongoose.Schema({
   },
 
 });
-module.exports = mongoose.model('StudentRegister', studentSchema);
+module.exports = mongoose.model('StudentRegister', studentData);
