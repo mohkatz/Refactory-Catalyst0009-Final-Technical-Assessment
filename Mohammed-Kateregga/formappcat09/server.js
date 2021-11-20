@@ -34,10 +34,10 @@ mongoose.connection
   });
 
 // Requiring routes.
-const StudentRegRoutes = require('./routes/StudentRegRoutes');
+const StudentRoutes = require('./routes/StudentRoutes');
 
 // Requiring models.
-const StudentReg = require('./models/StudentRegModels');
+const StudentReg = require('./models/StudentModels');
 
 
 // Configurations.
@@ -52,7 +52,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 app.use('/public/imagefiles', express.static(__dirname + '/public/imagefiles'));
 
 // Routes for the project.
-app.use('/', StudentRegRoutes);
+app.use('/', StudentRoutes);
 
 // app.get('/', (req, res) => {
 //   res.sendFile(__dirname + '/views/index.html');
